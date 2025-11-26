@@ -136,16 +136,23 @@ def duplicate_link(s, val):
     Link(1, Link(2, Link(2, Link(2, Link(2, Link(3))))))
     """
     "*** YOUR CODE HERE ***"
-    def mutate(s,val):
-        if s is Link.empty:
-            return Link.empty
-        if val==s.first:
-            return Link(s.first,Link(s.first,mutate(s.rest,val)))
+    # def mutate(s,val):
+    #     if s is Link.empty:
+    #         return Link.empty
+    #     if val==s.first:
+    #         return Link(s.first,Link(s.first,mutate(s.rest,val)))
+    #     else:
+    #         return Link(s.first,mutate(s.rest,val))
+    # result=mutate(s,val)
+    # s.first=result.first
+    # s.rest=result.rest
+    ptr=s
+    while(ptr!=Link.empty):
+        if ptr.first==val:
+            ptr.rest=Link(val,ptr.rest)
+            ptr=ptr.rest.rest
         else:
-            return Link(s.first,mutate(s.rest,val))
-    result=mutate(s,val)
-    s.first=result.first
-    s.rest=result.rest
+            ptr=ptr.rest
 
 class Link:
     """A linked list.
