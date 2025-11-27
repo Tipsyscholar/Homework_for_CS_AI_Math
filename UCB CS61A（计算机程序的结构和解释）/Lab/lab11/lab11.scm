@@ -14,7 +14,6 @@
               `(square ,(pow-expr base (/ exp 2)))
               `(* ,base (square ,(pow-expr base (quotient exp 2))))
             )
-            
       )
 )
 )
