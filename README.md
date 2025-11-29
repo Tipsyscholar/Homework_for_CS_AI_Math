@@ -1,8 +1,10 @@
 # 🚀 CAMP2026 
 
-<!-- > 工程师的**系统之力 (CS)**, 架构师的**算法之智 (AI)**, 理论家的**数学之核 (Math)** -->
+<!-- > 工程师的**系统之力 (CS)**, 架构师的**算法之智 (AI)**, 理论家的**数学之核 (Math)** ✨🎊🥳🥂💯🏆👏💐🌟-->
 > 🎉 2025.10.29 分析学博士资格考通过！
-
+<!-- > 🥳 2025.11.30 UCB CS61A完结撒花！(10次HW,12次Lab,4次Project) -->
+<!-- > 🥳 2025.12.15 CSAPP完结撒花!(8次Lab)
+>  -->
 
 
 ---
@@ -11,7 +13,7 @@
 >致力于更创新的，更准确，更快速，更可解释的：
 &emsp;&emsp;DGM（深度生成模型）科学计算算法以及RL/微调算法
 
-https://github.com/Tipsyscholar/Homework_for_ai-cs-math/blob/main/Paper_reading.md
+📄 [Paper Reading](https://github.com/Tipsyscholar/Homework_for_ai-cs-math/blob/main/Paper_reading.md)
 
 ### 🏛️ I. 计算机科学 (CS) - 系统与工程
 
@@ -20,16 +22,17 @@ https://github.com/Tipsyscholar/Homework_for_ai-cs-math/blob/main/Paper_reading.
 
 | 课程编号 | 课程名称/主题 | 来源 | 核心技术栈/目标 |
 | :--- | :--- | :--- | :--- |
+| **MIT Missing Semester**| 计算机教育中缺失的一课 | MIT | Shell, Vim/Neovim, Git, GDB, SSH, Tmux, CI/CD|
 | **UCB CS 61A** | 计算机程序的结构与解释 | UCB | Python, 函数式编程, 抽象思维, 解释器原理 |
 | **Stanford CS 106B&L**| C++ 编程 | Stanford | C++ (现代 C++11/17/20), STL, 模板, RAII |
 | **MIT 6.006** | 算法导论 | MIT & LeetCode | Python, 算法设计, 复杂度分析, 数学证明 |
-| **CMU 15-213**| 计算机系统：程序员视角 (CS:APP) | CMU & UCB | C, x86-64 汇编, OS 用户态, 链接, 缓存, 网络编程, CPU Datapath, Pipelining(UCB CS 61C补充)|
+| **CMU 15-213 & UCB CS 61C**| 计算机系统：程序员视角 (CS:APP) | CMU & UCB | C, x86-64 汇编, OS 用户态, 链接, 缓存, 网络编程, CPU Datapath, Pipelining|<!-- MIT 18.337 -->
 | **Stanford CS 149**| 并行计算架构与编程 | Stanford & ZJU & LeetGPU | CUDA, OpenMP, MPI, GPU 编程, 并行架构 |
 | **Stanford CS 144**| 计算机网络 | Stanford | C++, TCP/IP 协议栈实现, 路由, 网络理论 |
 | **UCB CS 162** | 操作系统与系统编程 | UCB | C, OS 内核态, 调度器, 文件系统, 高级并发 |
-| **Stanford CS 143**| 编译原理 | Stanford | 编译器前端/后端, LLVM, 优化 |
-| **CMU 15-445**| 数据库系统 | CMU | SQL, C++, 数据库内核 (B+ 树, MVCC, 恢复) |
-| **Stanford CS 246**| 大规模数据挖掘 | Stanford | 大规模数据挖掘, MapReduce, Spark, 推荐系统 |
+| **PKU Compiler & Cornell CS 6120**| 编译原理 | Cornell & PKU | 编译器前端/后端, LLVM, 优化 |
+| **CMU 15-445**| 数据库系统 | CMU | SQL, C++, 数据库内核 (B+ 树, MVCC, 恢复) | <!-- CS 246 -->
+|**CMU 10-605**| 大规模机器学习|CMU|Parameter Server, 分布式训练, MapReduce|
 | **MIT 6.824** | 分布式系统 | MIT | Raft 共识算法, Go 语言, 容错, gRPC |
 ---
 
@@ -40,13 +43,13 @@ https://github.com/Tipsyscholar/Homework_for_ai-cs-math/blob/main/Paper_reading.
 | 课程编号 | 课程名称/主题 | 来源 | 核心技术栈/目标 |
 | :--- | :--- | :--- | :--- |
 | **Stanford CS 336**| 深度自然语言处理 | Stanford | NLP, Transformers, PyTorch, Hugging Face |
-| **MIT 6.5940** | TinyML 与高效深度学习计算 | MIT | AI 系统, 模型量化, 剪枝, 知识蒸馏 |
+| **MIT 6.5940 & CMU 10-714** | TinyML 与高效深度学习计算 | MIT & CMU| AI 系统, 模型量化, 剪枝, 知识蒸馏 |
 |**Nanochat**	|项目复现	|Andrej Karpathy|AI 工程实践, LLM, 系统复现
 | **UCB CS 285** | 深度强化学习 | UCB | 强化学习, Q-Learning, Policy Gradients (PPO) |
 | **UCB CS 294-158**| 深度无监督学习 | UCB | GANs, VAEs, Flow-based Models, 自监督学习 |
 | **MIT 6.S987** | 深度生成模型 | MIT | 生成模型 (GANs, VAEs, Flows, 扩散模型) |
 | **MIT 6.S184** | 基于 SDE 的生成式 AI | MIT | SDEs, 扩散模型 (Diffusion Models), Score-Matching |
-|**ZJU CV**|计算机视觉|ZJU |SFM,SLAM,3DCV|
+|**ZJU CV & CMU 16-825**|计算机视觉|ZJU & CMU |SFM,SLAM,3DCV|
 | **USTC CG** | 计算机图形学 |USTC| C/C++, 3DGS,NeRF|
 ---
 
