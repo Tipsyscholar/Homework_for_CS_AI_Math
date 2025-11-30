@@ -312,14 +312,14 @@ for c1 in alphabet:
         r2, col2 = coords[c2]
         dist = max(abs(r1 - r2), abs(col1 - col2))  
         if dist == 1:
-            cost = 0.5  # 相邻
+            cost = 2  # 相邻
         elif dist == 2:
-            cost = 1.5  
+            cost = 6  
         else:
-            cost = 2.0 
+            cost = 8 
         KEY_DIST[(c1, c2)] = cost
 
-#大概1500pwd速度 correct/incorrect在3以上
+#大概1750 pwd速度 correct/incorrect在3以上
 @memo_diff
 def final_diff(typed, source, limit):
     while len(typed) >=2 and len(source) >=2 and typed[0] == source[0]:
@@ -327,15 +327,15 @@ def final_diff(typed, source, limit):
         source = source[1:]
 
     if typed == "" or source == "":
-        return abs(len(typed) - len(source))
-    if abs(len(typed) - len(source)) > limit:
+        return 4*abs(len(typed) - len(source))
+    if 4*abs(len(typed) - len(source)) > limit:
         return limit + 1
     if limit < 0: 
         return 1
     if typed == source:
         return 0
     if len(typed) >= 2 and len(source) >= 2 and typed[0] == source[1] and typed[1] == source[0]:
-        return 0.75 + final_diff(typed[2:], source[2:], limit - 0.75)
+        return 3 + final_diff(typed[2:], source[2:], limit - 3)
 
     if typed[0] == source[0]:
         return final_diff(typed[1:], source[1:], limit)
@@ -343,17 +343,17 @@ def final_diff(typed, source, limit):
     else:
         t_char = typed[0].lower()
         s_char = source[0].lower()
-        sub_cost = KEY_DIST.get((t_char, s_char), 1.0)
+        sub_cost = KEY_DIST.get((t_char, s_char), 4)
         
-        sub_result = float('inf')
+        sub_result = 1000
         if sub_cost <= limit:
             sub_result = sub_cost + final_diff(typed[1:], source[1:], limit - sub_cost)
-        add = 1 + final_diff(typed, source[1:], limit - 1)
-        remove = 1 + final_diff(typed[1:], source, limit - 1)
+        add = 4 + final_diff(typed, source[1:], limit - 4)
+        remove = 4 + final_diff(typed[1:], source, limit - 4)
         
         return min(add, remove, sub_result)
 
-FINAL_DIFF_LIMIT = 6  # REPLACE THIS WITH YOUR LIMIT
+FINAL_DIFF_LIMIT = 6*4  # REPLACE THIS WITH YOUR LIMIT
 
 ###########
 # Phase 3 #
