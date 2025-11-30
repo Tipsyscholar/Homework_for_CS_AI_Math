@@ -319,7 +319,7 @@ for c1 in alphabet:
             cost = 8 
         KEY_DIST[(c1, c2)] = cost
 
-#大概1750 pwd速度 correct/incorrect在3以上
+#大概1750 wpm速度 correct/incorrect在3以上
 @memo_diff
 def final_diff(typed, source, limit):
     while len(typed) >=2 and len(source) >=2 and typed[0] == source[0]:
