@@ -2,7 +2,7 @@
 
 <!-- > 工程师的**系统之力 (CS)**, 架构师的**算法之智 (AI)**, 理论家的**数学之核 (Math)** ✨🎊🥳🥂💯🏆👏💐🌟-->
 > 🎉 2025.10.29 分析学博士资格考通过！
-<!-- > 🥳 2025.11.30 UCB CS61A完结撒花！(10次HW,12次Lab,4次Project) -->
+> 🥳 2025.12.07 UCB CS61A完结撒花！(10次HW,12次Lab,4次Project)
 <!-- > 🥳 2025.12.15 CSAPP完结撒花!(8次Lab)
 >  -->
 
@@ -23,7 +23,7 @@
 | 课程编号 | 课程名称/主题 | 来源 | 核心技术栈/目标 |
 | :--- | :--- | :--- | :--- |
 | **MIT Missing Semester**| 计算机教育中缺失的一课 | MIT | Shell, Vim/Neovim, Git, GDB, SSH, Tmux, CI/CD|
-| **UCB CS 61A** | 计算机程序的结构与解释 | UCB | Python, 函数式编程, 抽象思维, 解释器原理 |
+| **UCB CS 61A** | 计算机程序的结构与解释 | UCB | Python, Scheme, SQL, Scheme解释器构建与优化(Tail Calls) |
 | **Stanford CS 106B&L**| C++ 编程 | Stanford | C++ (现代 C++11/17/20), STL, 模板, RAII |
 | **MIT 6.006** | 算法导论 | MIT & LeetCode | Python, 算法设计, 复杂度分析, 数学证明 |
 | **CMU 15-213 & UCB CS 61C**| 计算机系统：程序员视角 (CS:APP) | CMU & UCB | C, x86-64 汇编, OS 用户态, 链接, 缓存, 网络编程, CPU Datapath, Pipelining|<!-- MIT 18.337 -->
@@ -49,6 +49,7 @@
 | **UCB CS 294-158**| 深度无监督学习 | UCB | GANs, VAEs, Flow-based Models, 自监督学习 |
 | **MIT 6.S987** | 深度生成模型 | MIT | 生成模型 (GANs, VAEs, Flows, 扩散模型) |
 | **MIT 6.S184** | 基于 SDE 的生成式 AI | MIT | SDEs, 扩散模型 (Diffusion Models), Score-Matching |
+|**The Principles of Diffusion Models**|Open book|Sony AI & OpenAI & Stanford||
 |**ZJU CV & CMU 16-825**|计算机视觉|ZJU & CMU |SFM,SLAM,3DCV|
 | **USTC CG** | 计算机图形学 |USTC| C/C++, 3DGS,NeRF|
 ---
@@ -66,7 +67,7 @@
 | **2. 数据科学** | 组合优化 | ZJU & Stanford| 初等数学, 图论, 运筹学, 整数规划, 博弈论 |
 | | 大数据算法 | PKU | 大规模算法, 优化算法, 随机算法, 近似算法, 最优传输 |
 | | 机器学习 |MIT & Deep-ML| 随机优化, VC理论, 在线学习, SVM, 应用统计|
-| **3. 应用数学** | 矩阵计算 | ZJU | SVD, QR分解, 特征值数值解, 迭代算法, 矩阵分析|
+| **3. 应用数学** | 矩阵计算 | ZJU | SVD, QR分解, 特征值数值解, 迭代算法, 矩阵分析, 数值分析|
 | | PDE数值解 | ZJU  | PDE理论,有限元,有限差分 |
 | |应用几何与拓扑|CMU15-858 & MIT6.8410| 离散曲率、外微分、有限元FEM、Stokes定理应用(平滑、参数化、矢量场设计)|
 ---
