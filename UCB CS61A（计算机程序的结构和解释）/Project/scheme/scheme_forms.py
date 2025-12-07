@@ -37,11 +37,21 @@ def do_define_form(expressions, env):
         validate_form(expressions, 2, 2) # Checks that expressions is a list of length exactly 2
         # BEGIN PROBLEM 4
         "*** YOUR CODE HERE ***"
+        env.bindings[signature]=scheme_eval(expressions.rest.first,env)
+        return signature
         # END PROBLEM 4
     elif isinstance(signature, Pair) and scheme_symbolp(signature.first):
         # defining a named procedure e.g. (define (f x y) (+ x y))
         # BEGIN PROBLEM 10
         "*** YOUR CODE HERE ***"
+        curr=signature.rest
+        while(curr is not nil):
+            if not scheme_symbolp(curr.first):
+                raise SchemeError()
+            curr=curr.rest
+        ans=LambdaProcedure(signature.rest,expressions.rest,env)
+        env.bindings[signature.first]=ans
+        return signature.first
         # END PROBLEM 10
     else:
         bad_signature = signature.first if isinstance(signature, Pair) else signature
@@ -57,6 +67,7 @@ def do_quote_form(expressions, env):
     validate_form(expressions, 1, 1)
     # BEGIN PROBLEM 5
     "*** YOUR CODE HERE ***"
+    return expressions.first
     # END PROBLEM 5
 
 def do_begin_form(expressions, env):
@@ -83,6 +94,7 @@ def do_lambda_form(expressions, env):
     validate_formals(formals)
     # BEGIN PROBLEM 7
     "*** YOUR CODE HERE ***"
+    return LambdaProcedure(formals=expressions.first,body= expressions.rest,env=env)
     # END PROBLEM 7
 
 def do_if_form(expressions, env):
@@ -96,44 +108,92 @@ def do_if_form(expressions, env):
     """
     validate_form(expressions, 2, 3)
     if is_scheme_true(scheme_eval(expressions.first, env)):
-        return scheme_eval(expressions.rest.first, env)
+        return scheme_eval(expressions.rest.first, env,tail=True)
     elif len(expressions) == 3:
-        return scheme_eval(expressions.rest.rest.first, env)
+        return scheme_eval(expressions.rest.rest.first, env,tail=True)
+
+# def do_and_form(expressions, env):
+#     """Evaluate a (short-circuited) and form.
+
+#     >>> env = create_global_frame()
+#     >>> do_and_form(read_line("(#f (print 1))"), env) # evaluating (and #f (print 1))
+#     False
+#     >>> # evaluating (and (print 1) (print 2) (print 4) 3 #f)
+#     >>> do_and_form(read_line("((print 1) (print 2) (print 3) (print 4) 3 #f)"), env)
+#     1
+#     2
+#     3
+#     4
+#     False
+#     """
+#     # BEGIN PROBLEM 12
+#     "*** YOUR CODE HERE ***"
+#     curr=expressions
+#     a=True
+#     while(curr is not nil):
+#         a=scheme_eval(curr.first,env)
+#         if scheme_booleanp(a):
+#             if is_scheme_false(a):
+#                 return False
+#         curr=curr.rest
+#     return a
+#     # END PROBLEM 12
 
 def do_and_form(expressions, env):
-    """Evaluate a (short-circuited) and form.
-
-    >>> env = create_global_frame()
-    >>> do_and_form(read_line("(#f (print 1))"), env) # evaluating (and #f (print 1))
-    False
-    >>> # evaluating (and (print 1) (print 2) (print 4) 3 #f)
-    >>> do_and_form(read_line("((print 1) (print 2) (print 3) (print 4) 3 #f)"), env)
-    1
-    2
-    3
-    4
-    False
-    """
     # BEGIN PROBLEM 12
-    "*** YOUR CODE HERE ***"
+    curr = expressions
+    val = True
+    if curr is nil:
+        return True
+    while curr.rest is not nil: # 遍历直到倒数第二个
+        val = scheme_eval(curr.first, env) 
+        if is_scheme_false(val):
+            return val
+        curr = curr.rest
+    return scheme_eval(curr.first, env, True)
     # END PROBLEM 12
 
-def do_or_form(expressions, env):
-    """Evaluate a (short-circuited) or form.
 
-    >>> env = create_global_frame()
-    >>> do_or_form(read_line("(10 (print 1))"), env) # evaluating (or 10 (print 1))
-    10
-    >>> do_or_form(read_line("(#f 2 3 #t #f)"), env) # evaluating (or #f 2 3 #t #f)
-    2
-    >>> # evaluating (or (begin (print 1) #f) (begin (print 2) #f) 6 (begin (print 3) 7))
-    >>> do_or_form(read_line("((begin (print 1) #f) (begin (print 2) #f) 6 (begin (print 3) 7))"), env)
-    1
-    2
-    6
-    """
+# def do_or_form(expressions, env):
+#     """Evaluate a (short-circuited) or form.
+
+#     >>> env = create_global_frame()
+#     >>> do_or_form(read_line("(10 (print 1))"), env) # evaluating (or 10 (print 1))
+#     10
+#     >>> do_or_form(read_line("(#f 2 3 #t #f)"), env) # evaluating (or #f 2 3 #t #f)
+#     2
+#     >>> # evaluating (or (begin (print 1) #f) (begin (print 2) #f) 6 (begin (print 3) 7))
+#     >>> do_or_form(read_line("((begin (print 1) #f) (begin (print 2) #f) 6 (begin (print 3) 7))"), env)
+#     1
+#     2
+#     6
+#     """
+#     # BEGIN PROBLEM 12
+#     "*** YOUR CODE HERE ***"
+#     curr=expressions
+#     a=False
+#     while(curr is not nil):
+#         a=scheme_eval(curr.first,env)
+#         if scheme_booleanp(a):
+#             if is_scheme_true(a):
+#                 return True
+#         else: return a
+#         curr=curr.rest
+#     return a
+#     # END PROBLEM 12
+
+def do_or_form(expressions, env):
     # BEGIN PROBLEM 12
-    "*** YOUR CODE HERE ***"
+    curr = expressions
+    val = False
+    if curr is nil:
+        return False
+    while curr.rest is not nil:
+        val = scheme_eval(curr.first, env)
+        if is_scheme_true(val):
+            return val
+        curr = curr.rest
+    return scheme_eval(curr.first, env, True)
     # END PROBLEM 12
 
 def do_cond_form(expressions, env):
@@ -154,6 +214,9 @@ def do_cond_form(expressions, env):
         if is_scheme_true(test):
             # BEGIN PROBLEM 13
             "*** YOUR CODE HERE ***"
+            if clause.rest is nil:
+                return test
+            else: return eval_all(clause.rest,env)
             # END PROBLEM 13
         expressions = expressions.rest
 
@@ -178,6 +241,13 @@ def make_let_frame(bindings, env):
     names = vals = nil
     # BEGIN PROBLEM 14
     "*** YOUR CODE HERE ***"
+    curr=bindings
+    while(curr is not nil):
+        validate_form(curr.first,2,2)
+        names=Pair(curr.first.first,names)
+        vals=Pair(scheme_eval(curr.first.rest.first,env),vals)
+        validate_formals(names)
+        curr=curr.rest
     # END PROBLEM 14
     return env.make_child_frame(names, vals)
 
@@ -196,7 +266,7 @@ def do_quasiquote_form(expressions, env):
             if level == 0:
                 expressions = val.rest
                 validate_form(expressions, 1, 1)
-                return scheme_eval(expressions.first, env)
+                return scheme_eval(expressions.first, env,tail=True)
         elif val.first == 'quasiquote':
             level += 1
 
@@ -220,6 +290,7 @@ def do_mu_form(expressions, env):
     validate_formals(formals)
     # BEGIN PROBLEM 11
     "*** YOUR CODE HERE ***"
+    return MuProcedure(expressions.first,expressions.rest)
     # END PROBLEM 11
 
 
