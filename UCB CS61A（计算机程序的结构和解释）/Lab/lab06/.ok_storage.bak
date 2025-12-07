@@ -1,0 +1,4 @@
+'Transaction.report-correct', (0, 66)
+'Client-correct', (512, 66)
+'BankAccount-correct', (1024, 66)
+'Mint-correct', (1536, 66)
