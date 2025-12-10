@@ -65,7 +65,7 @@
 | **USTC CG** | 计算机图形学 |USTC| C/C++, 3DGS,NeRF|
 ---
 
-### 🌌 III. 数学 (Math) - 理论护城河
+### 🌌 III. 数学 (Math) - 基础课
 
 
 
