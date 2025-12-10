@@ -27,7 +27,9 @@
 | **MIT 6.006** | 算法导论 | MIT & LeetCode | Python, 算法设计, 复杂度分析, 数学证明 |
 | **CMU 15-213 & UCB CS 61C**| 计算机系统：程序员视角 (CS:APP) | CMU & UCB | C, x86-64 汇编, OS 用户态, 链接, 缓存, 网络编程, CPU Datapath, Pipelining|<!-- MIT 18.337 -->
 | **Stanford CS 149**| 并行计算架构与编程 | Stanford & ZJU & LeetGPU | CUDA, OpenMP, MPI, GPU 编程, 并行架构 |
-
+| **Stanford CS 144**| 计算机网络 | Stanford | C++, TCP/IP 协议栈实现, 路由, 网络理论 |
+| **UCB CS 162** | 操作系统与系统编程 | UCB | C, OS 内核态, 调度器, 文件系统, 高级并发 |
+| **PKU Compiler & Cornell CS 6120**| 编译原理 | Cornell & PKU | 编译器前端/后端, LLVM, 优化 |
 <!-- | **CMU 15-445**| 数据库系统 | CMU | SQL, C++, 数据库内核 (B+ 树, MVCC, 恢复) | -- CS 246 -
 |**CMU 10-605**| 大规模机器学习|CMU|Parameter Server, 分布式训练, MapReduce|
 | **MIT 6.824** | 分布式系统 | MIT | Raft 共识算法, Go 语言, 容错, gRPC | -->
@@ -64,8 +66,5 @@
 
 <!-- | | 机器学习 |MIT & Deep-ML| 随机优化, VC理论, 在线学习, SVM, 应用统计| -->
 <!-- | | 高维概率 | Roman Vershynin |链, 随机矩阵, 稀疏恢复, Dvoretzky–Milman 定理 | -->
-<!-- | **Stanford CS 144**| 计算机网络 | Stanford | C++, TCP/IP 协议栈实现, 路由, 网络理论 |
-| **UCB CS 162** | 操作系统与系统编程 | UCB | C, OS 内核态, 调度器, 文件系统, 高级并发 |
-| **PKU Compiler & Cornell CS 6120**| 编译原理 | Cornell & PKU | 编译器前端/后端, LLVM, 优化 | -->
 ---
 
