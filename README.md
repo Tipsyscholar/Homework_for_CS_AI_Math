@@ -1,11 +1,22 @@
 # 🚀 CAMP2026 
 
-<!-- > 工程师的**系统之力 (CS)**, 架构师的**算法之智 (AI)**, 理论家的**数学之核 (Math)** ✨🎊🥳🥂💯🏆👏💐🌟-->
-> 🎉 2025.10.29 分析学博士资格考通过！<br>
-> 🥳 2025.12.07 UCB CS61A完结撒花！(10次HW,12次Lab,4次Project)
-<!-- > 🥳 2025.12.15 CSAPP完结撒花!(8次Lab)
->  -->
-
+<!-- > 工程师的**系统之力 (CS)**, 架构师的**算法之智 (AI)**, 理论家的**数学之核 (Math)** 💯🏆🥳👏
+🎉🎊✨🥂💐🌟-->
+> 🎉 2025.10.29 分析学博士资格考通过<br>
+> 🌟 2025.11.12 MIT6.S184完结撒花(3次lab)
+> 🎊 2025.12.07 UCB CS61A完结撒花 (10次HW,12次Lab,4次Project)<br>
+<!-- > ✨ 2026.03.02 MIT Missing Semester完结撒花 (8次Lab)<br>
+> 🥂 2026.03.02 Stanford CS 106B&L完结撒花 (8次Lab)<br>
+> 💐 2026.03.02 MIT 6.006完结撒花 (8次Lab)<br>
+> 🌟 2026.03.02 CMU 15-213 & UCB CS 61C完结撒花 (8次Lab)<br>
+> 🎊 2026.03.02 Stanford CS 149完结撒花 (8次Lab)<br>
+> ✨ 2026.03.02 Stanford CS 336完结撒花 (8次Lab)<br>
+> 🥂 2026.03.02 MIT 6.5940 & CMU 10-714完结撒花 (8次Lab)<br>
+> 🥳 2026.03.02 UCB CS 285完结撒花 (8次Lab)<br>
+> 👏 2026.03.02 ZJU CV & CMU 16-825完结撒花 (8次Lab)<br>
+> 💐 2026.03.02 MIT 6.S184 完结撒花 <br>
+> 🌟 2026.03.02 MIT 6.S987完结撒花 (8次Lab)<br>
+> 👏 2026.03.02 The Principles of Diffusion Models 完结撒花 -->
 
 ---
 ### 🧪 0. 论文阅读与复现 (Paper Reading)
@@ -24,7 +35,7 @@
 | :--- | :--- | :--- | :--- |
 | **MIT Missing Semester**| 计算机教育中缺失的一课 | MIT | Shell, Vim/Neovim, Git, GDB, SSH, Tmux, CI/CD|
 | **UCB CS 61A** | 计算机程序的结构与解释 | UCB | Python, Scheme, SQL, Scheme解释器构建与优化(Tail Calls) |
-| **Stanford CS 106B&L**| C++ 编程 | Stanford | C++ (现代 C++11/17/20), STL, 模板, RAII |
+| **Stanford CS 106L**| C++ 编程 | Stanford | C++ (现代 C++11/17/20), STL, 模板, RAII |
 | **MIT 6.006** | 算法导论 | MIT & LeetCode | Python, 算法设计, 复杂度分析, 数学证明 |
 | **CMU 15-213 & UCB CS 61C**| 计算机系统：程序员视角 (CS:APP) | CMU & UCB | C, x86-64 汇编, OS 用户态, 链接, 缓存, 网络编程, CPU Datapath, Pipelining|<!-- MIT 18.337 -->
 | **Stanford CS 149**| 并行计算架构与编程 | Stanford & ZJU & LeetGPU | CUDA, OpenMP, MPI, GPU 编程, 并行架构 |
@@ -50,7 +61,7 @@
 | **MIT 6.S987** | 深度生成模型 | MIT | 生成模型 (GANs, VAEs, Flows, 扩散模型) |
 | **MIT 6.S184** | 基于 SDE 的生成式 AI | MIT | SDEs, 扩散模型 (Diffusion Models), Score-Matching |
 |**The Principles of Diffusion Models**|Open book|Sony AI & OpenAI & Stanford||
-|**ZJU CV & CMU 16-825**|计算机视觉|ZJU & CMU |SFM,SLAM,3DCV|
+|**CMU 16-825**|计算机视觉| CMU |SFM,SLAM,3DCV|
 | **USTC CG** | 计算机图形学 |USTC| C/C++, 3DGS,NeRF|
 ---
 
