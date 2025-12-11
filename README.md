@@ -16,7 +16,7 @@ AI前沿通识: NLP, CV, RL/Fine-tuning*
 |  | 分析学 | 基本功 | 数学分析, 实分析, 复分析, 泛函分析, 变分法, 测度论 |
 | **MIT Missing Semester**| 计算机教育中缺失的一课 | MIT | Shell, Vim/Neovim, Git, GDB, SSH, Tmux, CI/CD|
 | **UCB CS 61A** | 计算机程序的结构与解释 | UCB | Python, Scheme, SQL, Scheme解释器构建与优化(Tail Calls) |
-| **Stanford CS 106L**| C++ 编程 | Stanford | C++ (现代 C++11/17/20), STL, 模板, RAII |
+| **Stanford CS 106L**| C++ 编程 | Stanford | C++ (现代 C++11/17/20), STL, 模板, RAII, CG |
 | **MIT 6.006** | 算法导论与组合优化 | MIT & LeetCode & ZJU & Stanford| 图论, 运筹学, 整数规划, 博弈论 |
 | **CMU 15-213 & UCB CS 61C**| 计算机系统：程序员视角 (CS:APP) | CMU & UCB | C, x86-64 汇编, OS 用户态, 链接, 缓存, 网络编程, CPU Datapath, Pipelining|
 | **Stanford CS 144**| 计算机网络 | Stanford | C++, TCP/IP 协议栈实现, 路由, 网络理论 |

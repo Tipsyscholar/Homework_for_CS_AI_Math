@@ -1,5 +1,0 @@
-![alt text](image.png)
-![alt text](IMG_20251112_101113.jpg)
-![alt text](IMG_20251112_101121.jpg)
-![alt text](IMG_20251112_101123.jpg)
-![alt text](IMG_20251112_101129.jpg)

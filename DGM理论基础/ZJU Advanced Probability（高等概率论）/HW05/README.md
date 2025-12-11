@@ -1,0 +1,8 @@
+![alt text](image.png)
+![alt text](IMG_20251112_101131.jpg)
+![alt text](IMG_20251112_101138.jpg)
+![alt text](IMG_20251112_101148.jpg)
+![alt text](IMG_20251112_101151.jpg)
+![alt text](IMG_20251112_101157.jpg)
+![alt text](IMG_20251112_101159.jpg)
+![alt text](IMG_20251112_101206.jpg)
