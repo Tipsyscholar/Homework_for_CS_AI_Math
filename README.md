@@ -13,10 +13,7 @@ AI前沿通识: NLP, CV, RL/Fine-tuning*
 
 | 课程编号 | 课程名称/主题 | 来源 | 核心技术栈/目标 |
 | :--- | :--- | :--- | :--- |
-|  | 分析学 | 基本功 | 数学分析, 实分析, 复分析, 泛函分析, 变分法, 测度论 |
-| **MIT Missing Semester**| 计算机教育中缺失的一课 | MIT | Shell, Vim/Neovim, Git, GDB, SSH, Tmux, CI/CD|
-| **UCB CS 61A** | 计算机程序的结构与解释 | UCB | Python, Scheme, SQL, Scheme解释器构建与优化(Tail Calls) |
-| **Stanford CS 106L**| C++ 编程 | Stanford | C++ (现代 C++11/17/20), STL, 模板, RAII, CG |
+| **UCB CS 61A & MIT Missing Semester & Stanford CS 106L**| 语言栈(C++/Python) | MIT & Stanford  & UCB | Shell, Vim/Neovim, Git, GDB, SSH, Tmux, CI/CD, Python, Scheme, SQL, Scheme解释器构建与优化(Tail Calls), STL, 模板, C++, RAII, CG|
 | **MIT 6.006** | 算法导论与组合优化 | MIT & LeetCode & ZJU & Stanford| 图论, 运筹学, 整数规划, 博弈论 |
 | **CMU 15-213 & UCB CS 61C**| 计算机系统：程序员视角 (CS:APP) | CMU & UCB | C, x86-64 汇编, OS 用户态, 链接, 缓存, 网络编程, CPU Datapath, Pipelining|
 | **Stanford CS 144**| 计算机网络 | Stanford | C++, TCP/IP 协议栈实现, 路由, 网络理论 |
@@ -32,8 +29,7 @@ AI前沿通识: NLP, CV, RL/Fine-tuning*
 | 课程/领域 | 课程名称/主题 | 来源 | 核心技术栈/目标 |
 | :--- | :--- | :--- | :--- |
 | **Stanford CS 149**| 并行计算架构与编程 | Stanford & ZJU & LeetGPU | CUDA, OpenMP, MPI, GPU 编程, 并行架构 |
-| | 矩阵计算 | ZJU | SVD, QR分解, 特征值数值解, 迭代算法, 矩阵分析, 数值分析|
-| | PDE数值解 | ZJU  | PDE理论, 有限元, 有限差分, 后验误差估计|
+| | 矩阵计算与PDE数值解 | ZJU  | PDE理论, 有限元, 有限差分, 后验误差估计, SVD, QR分解, 特征值数值解, 迭代算法, 数值分析|
 | |应用几何与拓扑|CMU15-858 & MIT6.8410| 离散曲率、外微分、有限元FEM、Stokes定理应用(平滑、参数化、矢量场设计)|
 | **PKU Compiler & Cornell CS 6120**| 编译原理 | Cornell & PKU | 编译器前端/后端, LLVM, 优化 |
 | **MIT 6.5940 & CMU 10-714** | TinyML 与高效深度学习计算 | MIT & CMU| AI 系统, 模型量化, 剪枝, 知识蒸馏 |
