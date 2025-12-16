@@ -25,24 +25,11 @@ const std::string COURSES_NOT_OFFERED_PATH = "student_output/courses_not_offered
  * Hint: Remember what types C++ streams work with?!
  */
 struct Course {
-  /* STUDENT TODO */ title;
-  /* STUDENT TODO */ number_of_units;
-  /* STUDENT TODO */ quarter;
+  /* STUDENT TODO */std::string title;
+  /* STUDENT TODO */int  number_of_units;
+  /* STUDENT TODO */std::string quarter;
 };
 
-/**
- * (STUDENT TODO) Look at how the main function (at the bottom of this file)
- * calls `parse_csv`, `write_courses_offered`, and `write_courses_not_offered`.
- * Modify the signatures of these functions so that they work as intended, and then delete this
- * comment!
- */
-
-/**
- * Note:
- * We need to #include utils.cpp _after_ we declare the Course struct above
- * so that the code inside utils.cpp knows what a Course is.
- * Recall that #include literally copies and pastes file contents.
- */
 #include "utils.cpp"
 
 /**
@@ -59,7 +46,9 @@ struct Course {
  * @param courses  A vector of courses to populate.
  */
 void parse_csv(std::string filename, std::vector<Course> courses) {
-  /* (STUDENT TODO) Your code goes here... */
+
+  
+
 }
 
 /**
