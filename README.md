@@ -45,4 +45,4 @@ AI前沿通识: NLP, CV, RL/Fine-tuning*
 | :--- | :--- | :--- | :--- |
 | **理论基础** |高等概率论 & 高维概率 & 随机分析 & 大数据算法|从做中学/补|极限理论, 鞅表示, 不变测度, 随机算法, 随机矩阵, 近似算法, 优化算法,  SDEs, 随机积分, 稀疏恢复, 最优传输|
 | **MIT 6.S184 & MIT 6.S987** | 深度生成模型| MIT | SDEs, 扩散模型 (Diffusion Models), Score-Matching |
-| **Paper Reading** | 论文阅读与复现 | SIAM & arxiv & AI conference etc. | [Paper Reading List](https://github.com/Tipsyscholar/Homework_for_ai-cs-math/blob/main/Paper_reading.md) |
+| **Paper Reading** | 论文阅读与复现 | SIAM & arxiv & AI conference etc. | [Paper Reading List](https://github.com/Tipsyscholar/Homework_for_ai-cs-math/blob/main/Paper_reading/README.md) |

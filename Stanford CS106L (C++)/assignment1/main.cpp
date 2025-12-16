@@ -46,7 +46,7 @@ struct Course {
  * @param courses  A vector of courses to populate.
  */
 void parse_csv(std::string filename, std::vector<Course> courses) {
-
+  
   
 
 }
