@@ -26,7 +26,7 @@ const std::string COURSES_NOT_OFFERED_PATH = "student_output/courses_not_offered
  */
 struct Course {
   /* STUDENT TODO */std::string title;
-  /* STUDENT TODO */int  number_of_units;
+  /* STUDENT TODO */std::string  number_of_units;
   /* STUDENT TODO */std::string quarter;
 };
 
@@ -45,10 +45,21 @@ struct Course {
  * @param filename The name of the file to parse.
  * @param courses  A vector of courses to populate.
  */
-void parse_csv(std::string filename, std::vector<Course> courses) {
-  
-  
+using vecs=std::vector<std::string>;
+void parse_csv(std::string filename, std::vector<Course>& courses) {
 
+  std::ifstream s;
+  s.open(filename);
+  if(!s.is_open()){
+    std::cerr<<"file not open"<<'\n';
+  }
+  std::string line;
+  std::getline(s, line);
+  while(std::getline(s, line)){
+    vecs a=split(line,',');
+    Course d{a[0],a[1],a[2]};
+    courses.push_back(d);
+  }
 }
 
 /**
@@ -69,8 +80,23 @@ void parse_csv(std::string filename, std::vector<Course> courses) {
  * @param all_courses A vector of all courses gotten by calling `parse_csv`.
  *                    This vector will be modified by removing all offered courses.
  */
-void write_courses_offered(std::vector<Course> all_courses) {
+void write_courses_offered(std::vector<Course>& all_courses) {
   /* (STUDENT TODO) Your code goes here... */
+  
+  std::string s{"Title,Number of Units,Quarter"};
+  vecs a=split(s,',');
+  Course d={a[0],a[1],a[2]};
+  std::ofstream file{"student_output/courses_offered.csv"};
+  if(!file.is_open()){
+    std::cout<<"can not write"<<'\n';
+  }
+  file<<d<<'\n';
+  for (auto i :all_courses){
+    if(i.quarter!="null"){
+      file<<i<<'\n';
+    }
+  }
+
 }
 
 /**
@@ -88,6 +114,20 @@ void write_courses_offered(std::vector<Course> all_courses) {
  */
 void write_courses_not_offered(std::vector<Course> unlisted_courses) {
   /* (STUDENT TODO) Your code goes here... */
+  std::string s{"Title,Number of Units,Quarter"};
+  vecs a=split(s,',');
+  Course d={a[0],a[1],a[2]};
+  std::ofstream file{"student_output/courses_not_offered.csv"};
+  if(!file.is_open()){
+    std::cout<<"can not write"<<'\n';
+  }
+  file<<d<<'\n';
+  for (auto i :unlisted_courses){
+    if(i.quarter=="null"){
+      file<<i<<'\n';
+    }
+  }
+
 }
 
 int main() {
