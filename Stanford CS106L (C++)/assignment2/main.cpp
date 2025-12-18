@@ -29,7 +29,7 @@ std::string kYourName = "Bruce Lee"; // Don't forget to change this!
  */
 std::set<std::string> get_applicants(std::string filename) {
   // STUDENT TODO: Implement this function.
-  std::ifstream file{"./students.txt"};
+  std::ifstream file{filename};
   if(!file.is_open()){
     std::cerr<<"file not open"<<'\n';
   }
@@ -52,8 +52,8 @@ std::set<std::string> get_applicants(std::string filename) {
 std::queue<const std::string*> find_matches(std::string name, std::set<std::string>& students) {
   // STUDENT TODO: Implement this function.
   std::queue<const std::string*> result;
-  for(auto line :students){
-    if(line.substr(line.find(' ')+1)==name.substr(name.find(' '))){
+  for(const auto& line :students){
+    if(line[line.find(' ')+1]==name[name.find(' ')+1]&&line[0]==name[0]){
       result.push(&line);
     }
   }
@@ -74,7 +74,7 @@ std::string get_match(std::queue<const std::string*>& matches) {
   // STUDENT TODO: Implement this function.
   std::string* p;
   while(!matches.empty()){
-     if((std::stoi(*matches.front())-std::stoi(kYourName))%20==0){
+     if(matches.front()->length()%2==0){
       return *matches.front();
      }
      else{

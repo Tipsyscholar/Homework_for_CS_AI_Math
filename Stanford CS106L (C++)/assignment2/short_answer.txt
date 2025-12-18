@@ -5,7 +5,17 @@ Marriage Pact
 -------------
 
 Q1. It is your choice to use either an ordered or unordered set. In a few sentences, what are some of the tradeoffs between the two? Additionally, please give an example (that has not been shown in lecture) of a valid hash function that could be used to hash student names for an unordered set.
-A1. TODO
+A1. 
+Ordered Set (std::set): 基于红黑树实现。元素是自动排序的。插入和查找的时间复杂度是 $O(\log n)$。
+优点是数据有序，适合范围查询；缺点是比无序集合稍慢。
+Unordered Set (std::unordered_set): 基于哈希表实现。元素无序。插入和查找的平均时间复杂度是 $O(1)$。
+优点是速度快；缺点是内存占用通常较高，且最坏情况可能退化为 $O(n)$
+
+for(auto & c:s){
+    smu+=c;
+}
+return sum*s.length()
 
 Q2. Note that we are saving pointers to names in the queue, not names themselves. Why might this be desired in this problem? What happens if the original set where the names are stored goes out of scope and the pointers are referenced?
-A2. TODO
+A2. 指针只有 8 个字节（在 64 位系统上）。存指针避免了频繁的数据拷贝，提高了效率。
+如果原始的 set 销毁了，队列里的指针就会变成悬空指针，此时再访问会导致未定义行为
