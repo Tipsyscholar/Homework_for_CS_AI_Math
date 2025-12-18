@@ -5,11 +5,10 @@
 > 🎊 2025.12.07 UCB CS61A完结撒花 (10次HW,12次Lab,4次Project)<br>
 
 -----
+*语言栈: C/C++, Python, Go, cuda/triton<br>
+AI前沿: NLP, DGM, MLsys, RL/Fine-tuning*
 
 ### 🧱 I. Basic 求全
-
-*语言栈: C/C++, Python, cuda/triton<br>
-AI前沿通识: NLP, CV, RL/Fine-tuning*
 
 | 课程编号 | 课程名称/主题 | 来源 | 核心技术栈/目标 |
 | :--- | :--- | :--- | :--- |
