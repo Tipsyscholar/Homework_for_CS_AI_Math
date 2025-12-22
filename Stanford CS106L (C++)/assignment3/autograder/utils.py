@@ -347,7 +347,7 @@ def get_declarations(*files: os.PathLike):
                 "Couldn't find the path to g++. Did you follow the setup instructions?\n\nhttps://github.com/cs106l/cs106l-assignments"
             )
         compiler_path = result.stdout.strip()
-        compiler_path = f'"(" "{compiler_path}" -std=c++11 ")"'
+        compiler_path = f'"(" "{compiler_path}" -std=c++20 ")"'
 
     # Configure the C++ parser
     xml_generator_config = parser.xml_generator_configuration_t(
@@ -356,7 +356,7 @@ def get_declarations(*files: os.PathLike):
         compiler="g++",
         compiler_path=compiler_path,
         working_directory=ASSIGNMENT_DIR,
-        ccflags="-std=c++11",
+        ccflags="-std=c++20 -fno-sized-deallocation -D__cpp_sized_deallocation=0",
     )
 
     try:
