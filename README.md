@@ -5,7 +5,7 @@
 > 🎊 2025.12.07 UCB CS61A完结撒花 (10次HW,12次Lab,4次Project)<br>
 
 -----
-*语言栈: C/C++, Python, Go, cuda/triton<br>
+*语言栈: C, x86, C++, Python, Go, cuda/triton<br>
 AI前沿: NLP, DGM, MLsys, RL/Fine-tuning*
 
 ### 🧱 I. Basic 求全
@@ -14,12 +14,10 @@ AI前沿: NLP, DGM, MLsys, RL/Fine-tuning*
 | :--- | :--- | :--- | :--- |
 | **UCB CS 61A & MIT Missing Semester & Stanford CS 106L**| 语言栈(C++/Python) | MIT & Stanford  & UCB | Shell, Vim/Neovim, Git, GDB, SSH, Tmux, CI/CD, Python, Scheme, SQL, Scheme解释器构建与优化(Tail Calls), STL, 模板, C++, RAII|
 | **MIT 6.006** | 算法导论与组合优化 | MIT & LeetCode & ZJU & Stanford| 图论, 运筹学, 整数规划 |
-| **CMU 15-213 & UCB CS 61C**| 计算机系统：程序员视角 (CS:APP) | CMU & UCB | C, x86-64 汇编, OS 用户态, 链接, 缓存, 网络编程, CPU Datapath, Pipelining|
-| **Stanford CS 144**| 计算机网络 | Stanford | C++, TCP/IP 协议栈实现, 路由, 网络理论 |
-| **UCB CS 162** | 操作系统与系统编程 | UCB | C, OS 内核态, 调度器, 文件系统, 高级并发 |
-| **CMU 15-445**| 数据库系统 | CMU | SQL, C++, 数据库内核 (B+ 树, MVCC, 恢复) |
+| **CMU 15-213 & UCB CS 61C & UCB CS 162**| 计算机系统：程序员视角 (CS:APP) | CMU & UCB | C, x86-64 汇编, OS 用户态, 链接, 缓存, 网络编程, CPU Datapath, Pipelining, 虚拟内存 (Page Table), 并发锁 (Mutex), 线程调度, I/O模型|
+| **Stanford CS 144 & CMU 15-445**| 基础设施 I/O 与存储 | Stanford & CMU | TCP拥塞控制, RDMA概念; Buffer Pool (显存管理原型), B+ Tree (并发) |
 | **Stanford CS 336 & Nanochat**| 深度自然语言处理 | Stanford & Andrej Karpathy| NLP, Transformers, PyTorch, Hugging Face |
-| **UCB CS 285 & UCB CS 294-158** | 深度强化学习与无监督学习 | UCB | 强化学习, Q-Learning, Policy Gradients (PPO), GANs, 自监督学习|
+| **UCB CS 285 & UCB CS 294-158** | 深度强化学习与微调 | UCB & Hugging Face | 强化学习, Q-Learning, Policy Gradients (PPO), GANs, LoRA, 自监督学习|
 <!-- |**CMU 16-825**|计算机视觉| CMU |SFM,SLAM,3DCV| -->
 -----
 
@@ -27,22 +25,51 @@ AI前沿: NLP, DGM, MLsys, RL/Fine-tuning*
 
 | 课程/领域 | 课程名称/主题 | 来源 | 核心技术栈/目标 |
 | :--- | :--- | :--- | :--- |
-| **Stanford CS 149**| 并行计算架构与编程 | Stanford & ZJU & LeetGPU | CUDA, OpenMP, MPI, GPU 编程, 并行架构 |
+| **Stanford CS 149**| 并行计算架构与编程 | Stanford & ZJU & LeetGPU | CUDA, OpenMP, MPI, GPU 编程, 并行架构, 缓存一致性 |
 | | 矩阵计算与PDE数值解 | ZJU  | PDE理论, 有限元, 有限差分, 后验误差估计, SVD, QR分解, 特征值数值解, 迭代算法, 数值分析|
-| **PKU Compiler & Cornell CS 6120**| 编译原理 | Cornell & PKU | 编译器前端/后端, LLVM, 优化 |
+| **PKU Compiler & Cornell CS 6120**| 编译原理 | Cornell & PKU | 编译器前端/后端, LLVM IR, 优化 |
 | **MIT 6.5940 & CMU 10-714** | TinyML 与高效深度学习计算 | MIT & CMU| AI 系统, 模型量化, 剪枝, 知识蒸馏 |
-| **MIT 6.824** | 分布式系统 | MIT | Raft 共识算法, Go 语言, 容错, gRPC |
-|**Paper Reading & Coding** |推理加速|业界方案 & Github|SGlang,vllm,tilelang,NSA,Flashinfer等[Paper Reading List](https://github.com/Tipsyscholar/Homework_for_ai-cs-math/blob/main/Paper_reading/README.md)|
+| **MIT 6.824** | 分布式系统 | MIT | Raft (Leader Election/Log), Go 语言, 容错, gRPC |
+|**Paper Reading & Coding** |推理加速|业界方案 & Github & Hugging face|SGlang, vllm, tilelang, NSA, PagedAttention, Flashinfer等[Paper Reading&Coding List](https://github.com/Tipsyscholar/Homework_for_ai-cs-math/blob/main/Paper_reading/README.md)|
 <!-- | |应用几何与拓扑|CMU15-858 & MIT6.8410| 离散曲率、外微分、有限元FEM、Stokes定理应用(平滑、参数化、矢量场设计)| -->
 -----
 
-### 🎨 III. DGM (生成模型与理论) 深入
+### 🎨 III. Research 深入
 
-> 致力于更创新的，更准确，更快速，更可解释的：<br>
-> &emsp;&emsp;高维随机微分方程的数值解、并行计算以及RL/微调算法
+<!-- > 致力于更创新的，更准确，更快速，更可解释的：<br>
+> &emsp;&emsp;高维随机微分方程的数值解、并行计算以及RL/微调算法 -->
 
-| 课程/领域 | 课程名称/主题 | 来源 | 核心技术栈/目标 |
-| :--- | :--- | :--- | :--- |
-| **理论基础** |高等概率论 & 高维概率 & 随机分析 & 大数据算法|从做中学/补|极限理论, 鞅表示, 不变测度, 随机算法, 随机矩阵, 近似算法, 优化算法,  SDEs, 随机积分, 稀疏恢复, 最优传输|
-| **MIT 6.S184 & MIT 6.S987** | 深度生成模型| MIT | SDEs, 扩散模型 (Diffusion Models), Score-Matching |
-| **Paper Reading & Coding** | 论文阅读与复现 | SIAM & arxiv & AI conference etc. | [Paper Reading List](https://github.com/Tipsyscholar/Homework_for_ai-cs-math/blob/main/Paper_reading/README.md) |
+<table>
+  <tr>
+    <th>兴趣范围</th>
+    <th>列表</th>
+    <th>来源</th>
+    <th>主题</th>
+  </tr>
+  <tr>
+<td style="text-align: center;">
+  <b>Scientific Computing</b><br>
+  <b>Deep Generative Models</b><br>
+  <b>AI with PDE</b>
+</td>
+    <td>
+      <a href="https://github.com/Tipsyscholar/Homework_for_ai-cs-math/blob/main/Paper_reading/README.md">
+        Paper Reading&Coding List
+      </a>
+    </td>
+    <td style="text-align: center;">
+      SIAM<br>
+      arXiv<br>
+      AI conference<br>
+      GitHub<br>
+      Hugging Face
+    </td>
+    <td>
+      FNO, Geo-FNO, MeshGraphNet,<br>
+      Mesh Generative Model,<br>
+      High-order Flow ODE-solver
+    </td>
+  </tr>
+</table>
+
+
