@@ -2,7 +2,7 @@
  * CS:APP Data Lab 
  * 
  * <Please put your name and userid here>
- * 
+ * Hsing-Po Kao
  * bits.c - Source file with your solutions to the Lab.
  *          This is the file you will hand in to your instructor.
  *
@@ -143,7 +143,10 @@ NOTES:
  *   Rating: 1
  */
 int bitXor(int x, int y) {
-  return 2;
+  int a=x&(~y);
+  int b=(~x)&y;
+  int c=(~a)&(~b);
+  return ~c;
 }
 /* 
  * tmin - return minimum two's complement integer 
@@ -152,8 +155,7 @@ int bitXor(int x, int y) {
  *   Rating: 1
  */
 int tmin(void) {
-
-  return 2;
+  return 1<<31;
 
 }
 //2
@@ -165,7 +167,7 @@ int tmin(void) {
  *   Rating: 1
  */
 int isTmax(int x) {
-  return 2;
+  return !(((1<<31)^x)+1);
 }
 /* 
  * allOddBits - return 1 if all odd-numbered bits in word set to 1
@@ -176,7 +178,7 @@ int isTmax(int x) {
  *   Rating: 2
  */
 int allOddBits(int x) {
-  return 2;
+  return ;
 }
 /* 
  * negate - return -x 
@@ -186,7 +188,7 @@ int allOddBits(int x) {
  *   Rating: 2
  */
 int negate(int x) {
-  return 2;
+  return (~x)+1;
 }
 //3
 /* 
@@ -199,7 +201,9 @@ int negate(int x) {
  *   Rating: 3
  */
 int isAsciiDigit(int x) {
-  return 2;
+    int a=(x+negate(0x30))>>31;
+    int b=(0x39+negate(x))>>31;
+    return (!a)&(!b);
 }
 /* 
  * conditional - same as x ? y : z 
@@ -209,7 +213,7 @@ int isAsciiDigit(int x) {
  *   Rating: 3
  */
 int conditional(int x, int y, int z) {
-  return 2;
+  return (y&!x)|();
 }
 /* 
  * isLessOrEqual - if x <= y  then return 1, else return 0 
@@ -219,7 +223,7 @@ int conditional(int x, int y, int z) {
  *   Rating: 3
  */
 int isLessOrEqual(int x, int y) {
-  return 2;
+  return !((y+negate(x))>>31);
 }
 //4
 /* 
@@ -231,7 +235,7 @@ int isLessOrEqual(int x, int y) {
  *   Rating: 4 
  */
 int logicalNeg(int x) {
-  return 2;
+  return ;
 }
 /* howManyBits - return the minimum number of bits required to represent x in
  *             two's complement
