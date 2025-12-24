@@ -6,10 +6,11 @@
 |Hyper-Compression: Model Compression via Hyperfunction|arxiv|模型压缩|用非有理缠绕让一条线遍历二维单位正方形，用kd树最近邻搜索来记录参数值，这样参数的浮点数就变成了整数，能减少存储比特;<br><br>把参数按照K=2分组，选定a使得尽量密铺，并且分成M组来缩放，可以并行加速|
 |An AI-Aided Algorithm for Multivariate Polynomial Reconstruction on Cartesian Grids and the PLG Finite Difference Method|SIAM JSC 2024|高级数据结构与算法|三角格和主格之间用D阶置换群来通信，用部分置换的想法来把问题分解成为顺序操作，从而可以用回溯法来生成一个适定的三角格，以便于对边界进行多项式Lagrange插值，其中回溯的顺序用到了部分置换群;|最小二乘的条件数随膨胀先小后急剧升高|
 |A Practical Diffusion Path for Sampling|ICML 2024|生成模型高效采样|使用Dirac分布作为Proposal分布进行卷积路径Annealed Langevin动力学采样，此时$$\nabla \log \mu _{t}(x) = \frac{1}{\sqrt{\lambda _{t}}}\nabla \log \pi\left(\frac{x}{\sqrt{\lambda _{t}}}\right)$$分数可以显式计算(只需对神经网络已拟合得到的score场线性变换即可)，核心优势在于mode覆盖速度很快，分布差异(KL(scipy库KDE拟合),KSD,OT(otto库Sinkorn算法),MMD)降速快|初始分布比较重要，从原点出发初始化，ULA的mode最先坍塌到"1"数字，因其分布与原点的欧氏距离最接近;<br><br>但是其自适应步长会导致分布偏移|
-|ADAPTIVE STEPSIZE ALGORITHMS FOR LANGEVIN DYNAMICS|SIAM JSC 2024|生成模型高效采样|||
-|Adjoint Matching: Fine-tuning Flow and Diffusion Generative Models with Memoryless Stochastic Optimal Control||生成模型微调|||
-|DPM-solver: A fast ODE solver for diffusion probabilistic model sampling in around 10 steps|NeurIPS 2022|生成模型高效采样|||
+|ADAPTIVE STEPSIZE ALGORITHMS FOR LANGEVIN DYNAMICS|SIAM JSC 2024|生成模型高效采样|绝大部分修正格式都可以直接套用无穷小生成元和伴随算子来计算, 值得注意的是欠阻尼Langvin动力学的建模方式或许可以用在视频生成上以保留动量信息和因果关联, 否则仅凭Rope的"语义顺序"学习直观感觉难以克服长序列问题和动作/物理流畅问题, 同样可以留意ABOBA的类似对称保辛数值格式||
+|Adjoint Matching: Fine-tuning Flow and Diffusion Generative Models with Memoryless Stochastic Optimal Control|arxiv|生成模型微调|||
+|DPM-solver: A fast ODE solver for diffusion probabilistic model sampling in around 10 steps|NeurIPS 2022|生成模型高效采样|对概率Flow这类包含线性项的ODE基本都可以变换成为指数积分的准确解形式, 核心贡献就在于$$\boldsymbol{x}_{t_{i-1} \to t_i} = \frac{\alpha_{t_i}}{\alpha_{t_{i-1}}} \tilde{\boldsymbol{x}}_{t_{i-1}} - \alpha_{t_i} \sum_{n=0}^{k-1} \hat{\boldsymbol{\epsilon}}_\theta^{(n)}(\hat{\boldsymbol{x}}_{\lambda_{t_{i-1}}}, \lambda_{t_{i-1}}) \int_{\lambda_{t_{i-1}}}^{\lambda_{t_i}} e^{-\lambda} \frac{(\lambda - \lambda_{t_{i-1}})^n}{n!} d\lambda + \mathcal{O}(h_i^{k+1})$$||
 |DPM-solver++: Fast solver for guided sampling of diffusion probabilistic models|arxiv|生成模型高效采样|||
-|Reinforcement Learning for Adaptive Mesh Refinement| ICLR 2022|自适应网格划分|||
-|Fourier Neural Operator for Parametric Partial Differential Equations|ICLR 2021|算子学习|||
+|Reinforcement Learning for Adaptive Mesh Refinement| JCP 2023|自适应网格划分|||
+|Fourier Neural Operator for Parametric Partial Differential Equations|ICLR 2021|算子学习|类似于PDE频域演化过程, 分阶段学习R(频域演化)来实现对不同分布条件$a(x)$对应的算子的学习, Wx并非残差而是边界条件补偿, 非线性激活可以创造出高频信息||
 |Fourier Neural Operator with Learned Deformations  for PDEs on General Geometries|JMLR 2023|算子学习|||
+|Reconstructing Riemannian Metrics From Random Geometric Graphs|arxiv|高维概率流形学习|给出了$n^{-\frac{1}{d+2}}$的收敛阶,仅使用邻接矩阵信息$AA^T$(随机几何图二阶统计量/共同邻居), 也即保存N个样本点和k个稀疏邻居, 即可重建流形信息, 并且对缺失边具有鲁棒性。不知是否可以用到GNN或PDE求解上, 以兔子为例, $N*32*3$ 三维点云, 用上述方法存则为 $N*k*\log_2 N$, 但显然高维空间的低维流形可行,100万个点,3维流形, 误差界0.06, 实用性有待探究。流形学习的意义在于黎曼度量优化(类似于自适应), 符合语义距离, 以及给出合理的插值路径(欧氏空间线性插值会出现鬼影,不一定落在有意义的图像流形上), 一大类去噪模型本质就是学会将流形附近的点推回流形上||
